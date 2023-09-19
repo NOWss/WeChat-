@@ -1,0 +1,74 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(240, 240, 240);
+
+  .top-user {
+    background-color: #e4393c;
+    height: 200rpx;
+    display: flex;
+    padding: 30rpx;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 60rpx);
+
+    .img-box {
+      width: 100rpx;
+      background-color: #fff;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .text-box {
+      flex: 1;
+      margin-left: 20rpx;
+      color: #fff;
+
+      .user {
+        font-weight: bold;
+        font-size: 40rpx;
+      }
+    }
+  }
+
+  .my-order {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 120rpx);
+    margin: 30rpx;
+    padding: 30rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+
+    .text-box {
+      .title {
+        font-size: 36rpx;
+      }
+
+      .text {
+        color: rgb(119, 119, 119);
+      }
+    }
+
+  }
+
+  .help {
+    width: 100%;
+  }
+
+  .banner {
+    width: calc(100% - 60rpx);
+    margin-bottom: 20rpx;
+
+    .img-box {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 20rpx;
+    }
+  }
+
+  .backLogin {
+    margin: 30rpx 0;
+    width: calc(100vw - 60rpx);
+  }
+}

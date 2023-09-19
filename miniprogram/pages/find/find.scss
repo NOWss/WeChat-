@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 4247042 */
+  src: url('//at.alicdn.com/t/c/font_4247042_ye7xu4uo74e.woff2?t=1694607806539') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4247042_ye7xu4uo74e.woff?t=1694607806539') format('woff'),
+    url('//at.alicdn.com/t/c/font_4247042_ye7xu4uo74e.ttf?t=1694607806539') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jianshao:before {
+  content: "\e8b1";
+}
+
+.icon-huo:before {
+  content: "\e66c";
+}
+
+.icon-dingwei:before {
+  content: "\e717";
+}
+
+
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  .store {
+    background-color: #e4393c;
+    height: 200rpx;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    width: calc(100% - 40rpx);
+    padding: 20rpx;
+
+    .img-box {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 120rpx;
+      background-color: #fff;
+    }
+
+    .text-box {
+      color: #fff;
+      margin-left: 50rpx;
+    }
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+
+    .menu-list {
+      flex: 1;
+
+      >.title {
+        text-align: left;
+        color: rgb(129, 129, 129);
+        font-size: 32rpx;
+        padding: 30rpx 20rpx;
+      }
+    }
+
+    .menu-item {
+      width: auto;
+      padding: 20rpx;
+      display: flex;
+      justify-content: space-between;
+
+
+      .img-box {
+        width: 200rpx;
+        border-radius: 20rpx;
+        overflow: hidden;
+
+        .auto-img {
+          height: 180rpx !important;
+          width: auto;
+        }
+      }
+
+      .text-box {
+        font-weight: bold;
+        flex: 1;
+        height: 180rpx;
+        line-height: 90rpx;
+        margin-left: 20rpx;
+
+        .title {
+          font-size: 36rpx;
+        }
+
+        .price {
+          font-weight: bold;
+          font-size: 28rpx;
+
+          >text {
+            color: #e4393c;
+
+            &:last-child {
+              font-size: 36rpx;
+            }
+          }
+        }
+
+      }
+
+      .btn-box {
+        display: flex;
+        align-items: flex-end;
+
+        .count {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .shop-cart {
+    position: absolute;
+    bottom: 0;
+    padding: 0 20rpx;
+    padding-right: 0;
+    width: calc(100% - 20rpx);
+    background-color: rgba($color: #000000, $alpha: .8);
+    height: 100rpx;
+    display: flex;
+    color: #fff;
+    z-index: 999;
+
+
+    .icon-box {
+      background-color: #f9ca5c;
+      width: 100rpx;
+      height: 100rpx;
+      text-align: center;
+      line-height: 120rpx;
+      border-radius: 50%;
+      position: relative;
+      top: -20rpx;
+    }
+
+    .all-price {
+      padding-top: 5rpx;
+      font-weight: bold;
+      font-size: 40rpx;
+      margin-left: 20rpx;
+      flex: 1;
+    }
+
+    .submit {
+      background-color: #f9ca5c;
+      width: 150rpx;
+      text-align: center;
+      line-height: 100rpx;
+      font-weight: bold;
+      font-size: 34rpx;
+      cursor: pointer;
+    }
+  }
+
+  .popup {
+    padding: 30rpx;
+    padding-bottom: 100rpx;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        font-weight: bold;
+        font-size: 36rpx;
+      }
+
+      .clear-cart {
+        font-size: 28rpx;
+        color: #999;
+        cursor: pointer;
+      }
+    }
+
+    .cart-list {
+      margin-top: 50rpx;
+
+      .cart-item {
+        width: auto;
+        display: flex;
+        margin-bottom: 20rpx;
+        justify-content: space-between;
+
+        .img-box {
+          width: 120rpx;
+          height: 120rpx;
+          border-radius: 20rpx;
+          overflow: hidden;
+
+          .auto-img{
+            height: 120rpx !important;
+            width: auto;
+          }
+
+        }
+
+        .text-box {
+          flex: 1;
+          margin-left: 20rpx;
+
+          .title {
+            font-size: 36rpx;
+            font-weight: bold;
+            line-height: 70rpx;
+          }
+
+          .price {
+            color: #e4393c;
+            font-weight: bold;
+
+            >text {
+              &:last-child {
+                font-size: 36rpx;
+              }
+            }
+          }
+
+         
+        }
+
+        .btn-box{
+          display: flex;
+          align-items: flex-end;
+          .count{
+            line-height: 26px;
+          }
+        }
+      }
+
+    }
+  }
+}

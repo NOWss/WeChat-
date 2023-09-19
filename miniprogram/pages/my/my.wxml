@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="top-user">
+    <view class="img-box">
+      <image class="auto-img" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+    </view>
+    <view class="text-box">
+      <view class="user">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+
+  <view class="my-order" bindtap="onList">
+    <view class="text-box" >
+      <view class="title">我的订单</view>
+      <view class="text">查看我的订单</view>
+    </view>
+    <van-icon name="balance-list" size="40" />
+  </view>
+  <view class="banner">
+    <view class="img-box">
+      <image class="auto-img" src="cloud://cloud1-6gh49ilz9298994f.636c-cloud1-6gh49ilz9298994f-1317541875/images/1233.jpg" mode="widthFix"/>
+    </view>
+  </view>
+  <view class="help">
+    <van-cell-group inset>
+    <van-cell title="发票管理" is-link size="large" />
+    <van-cell title="我的优惠" is-link size="large" />
+    <van-cell title="程序反馈" is-link size="large" />
+    <van-cell title="服务热线" is-link size="large" />
+    </van-cell-group>
+  </view>
+  <van-button type="danger" custom-class="backLogin" round bindtap="backLogin">退出登录</van-button>
+
+</view>

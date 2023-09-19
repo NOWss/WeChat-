@@ -1,0 +1,115 @@
+.container {
+  background-color: #ddd;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container .top-nav {
+  margin-top: 30rpx;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.container .commodity-box {
+  margin: 40rpx 0;
+  width: calc(100vw - 20rpx);
+  background-color: #fff;
+  padding: 10rpx;
+}
+
+.container .commodity-box > .title {
+  font-size: 36rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #999;
+  margin-bottom: 20rpx;
+}
+
+.container .commodity-box .commodity-list > view {
+  margin-bottom: 30rpx;
+}
+
+.container .commodity-box .commodity-list .commodity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rpx;
+}
+
+.container .commodity-box .commodity-list .commodity-item .img-box {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.container .commodity-box .commodity-list .commodity-item .img-box .auto-img {
+  height: 100% !important;
+}
+
+.container .commodity-box .commodity-list .commodity-item .text-box {
+  flex: 1;
+  margin-left: 20rpx;
+  line-height: 75rpx;
+}
+
+.container .commodity-box .commodity-list .commodity-item .text-box .title {
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.container .commodity-box .commodity-list .commodity-item .text-box .price {
+  color: #e4393c;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.container .commodity-box .commodity-list .commodity-item .text-box .price > text {
+  font-size: 28rpx;
+}
+
+.container .commodity-box .commodity-list .extra-charges {
+  padding: 0 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .commodity-price {
+  width: calc(100vw - 30rpx);
+  background-color: #fff;
+  padding: 15rpx;
+  margin-bottom: 30rpx;
+}
+
+.container .commodity-price .tag-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80rpx;
+}
+
+.container .commodity-price .tag-price .price > text {
+  font-size: 26rpx;
+}
+
+.container .commodity-price .all-price {
+  text-align: right;
+}
+
+.container .commodity-price .all-price .price {
+  color: #e4393c;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.container .commodity-price .all-price .price .monetary {
+  font-size: 28rpx;
+}
+
+.container .remark {
+  width: 100vw;
+}
+
+.container .password-popup {
+  width: 80vw;
+  border: 1px solid #000;
+  margin: 60rpx auto;
+}

@@ -1,0 +1,76 @@
+<!--pages/find/find.wxml-->
+<view class="container">
+  <view class="store">
+    <view class="img-box">
+      <image class="auto-img" src="{{store.logo}}" mode="widthFix"></image>
+    </view>
+    <view class="text-box">
+      <view class="time">营业中 00:00~23:59</view>
+      <view>商家暂不支持配送</view>
+    </view>
+  </view>
+  <view class="menu">
+    <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+      <van-sidebar-item title="{{ item.tab }}" wx:for="{{ sidebar }}" wx:key="index" wx:for-item="item" />
+    </van-sidebar>
+    <scroll-view scroll-y bindscroll="onContentScroll" scroll-into-view="{{ toView }}" scroll-with-animation>
+      <view class="menu-list" wx:for="{{sidebar}}" wx:for-item="i" wx:key="index" id="{{i.id}}">
+        <view class="title">
+          {{ i.tab }}
+        </view>
+        <view class="menu-item" wx:for="{{ newMenu[index] }}" data-index="{{activeKey}}" wx:for-item="item" wx:key="i">
+          <view class="img-box">
+            <image class="auto-img" src="{{ item.img }}" mode="widthFix" />
+          </view>
+          <view class="text-box">
+            <view class="title">{{ item.name }}</view>
+            <view class="price">
+              <text>￥</text><text>{{ item.price }}</text>/份
+            </view>
+          </view>
+          <view class="btn-box">
+            <view class="iconfont icon-jianshao" style="font-size: 26px;" wx:if="{{item.count!=0}}" data-id="{{item.id}}" bindtap="onReduce"></view>
+            <text class="count" space="nbsp" wx:if="{{item.count!=0}}"> {{item.count}} </text>
+            <van-icon name="add" color="#e4393c" size="26" bindtap="onAdd" data-id="{{item.id}}" />
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="shop-cart">
+    <view class="icon-box">
+      <van-icon name="shopping-cart-o" color="#fff" size="36" info="{{ totalNum }}" bindtap="showPopup" />
+    </view>
+    <view class="all-price">￥{{totalPrice}}</view>
+    <view class="submit" bindtap="goBuy">结算</view>
+  </view>
+  <van-popup show="{{ show }}" position="bottom" custom-style="max-height: 60%;" bind:close="onClose" round>
+    <view class="popup">
+      <view class="top">
+        <view class="title">餐品详情</view>
+        <view class="clear-cart">
+          <van-icon name="delete-o" />
+          <text> 清空购物车</text>
+        </view>
+      </view>
+      <view class="cart-list">
+        <view class="cart-item" wx:for="{{shopCart}}" wx:key="index" wx:for-item="item">
+          <view class="img-box">
+            <image class="auto-img" src="{{item.img}}" mode="widthFix" />
+          </view>
+          <view class="text-box">
+            <view class="title">{{item.name}}</view>
+            <view class="price">
+              <text>￥</text><text>{{item.price}}</text>
+            </view>
+          </view>
+          <view class="btn-box">
+            <view class="iconfont icon-jianshao" style="font-size: 26px;" data-id="{{item.id}}" bindtap="onReduce"></view>
+            <text class="count" space="nbsp"> {{item.count}} </text>
+            <van-icon name="add" color="#e4393c" size="26" bindtap="onAdd" data-id="{{item.id}}" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-popup>
+</view>

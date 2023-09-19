@@ -1,0 +1,67 @@
+<view class="container">
+  <!-- 选择座位，人数 -->
+  <van-cell-group custom-class="top-nav">
+    <van-cell icon="location-o" title="吴小主" size="large" />
+    <van-cell icon="friends-o" title="用餐人数" value="{{numberPeople}}" is-link size="large" bind:click="openPeople" />
+    <van-cell icon="friends-o" title="就餐桌台" value="{{table}}" is-link size="large" bind:click="openTable" />
+  </van-cell-group>
+  <!-- 结算商品信息 -->
+  <view class="commodity-box">
+    <view class="title">商品信息</view>
+    <view class="commodity-list">
+      <view class="commodity-item" wx:for="{{buyData}}" wx:key="index" wx:for-item="item">
+        <view class="img-box">
+          <image class="auto-img" src="{{item.img}}" mode="widthFix" />
+        </view>
+        <view class="text-box">
+          <view class="title">{{item.name}}</view>
+          <view class="price">
+            <text>￥</text>{{item.price}}
+          </view>
+        </view>
+        <view class="count">x{{item.count}}</view>
+      </view>
+      <view class="extra-charges">
+        <view>餐具费</view>
+        <view class="text">
+          <text>￥</text>0.00
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="commodity-price">
+    <view class="tag-price">
+      <view class="title">商品金额</view>
+      <view class="price">
+        <text>￥</text>{{totalPrice}}
+      </view>
+    </view>
+    <view class="all-price">
+      共 {{totalNum}} 件商品，合计：<text class="price"><text class="monetary">￥</text>{{totalPrice}}</text>
+    </view>
+
+  </view>
+  <view class="remark">
+    <van-cell-group>
+      <van-field value="{{ message }}" label="备注" type="textarea" placeholder="请输入留言" autosize />
+    </van-cell-group>
+  </view>
+  <van-submit-bar price="{{ totalPrice * 100 }}" button-text="提交订单" bind:submit="onSubmit" />
+  <van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 20%">
+    <van-cell-group inset custom-class="password-popup">
+      <van-field value="{{ password }}" type="password" placeholder="请输入支付密码" bind:change="payment" />
+    </van-cell-group>
+  </van-popup>
+  <van-action-sheet
+  show="{{ friendShow }}"
+  actions="{{ people }}"
+  bind:close="onClose"
+  bind:select="onPeopleSelect"
+/>
+<van-action-sheet
+  show="{{ tableShow }}"
+  actions="{{ tableNum }}"
+  bind:close="onClose"
+  bind:select="onTableSelect"
+/>
+</view>

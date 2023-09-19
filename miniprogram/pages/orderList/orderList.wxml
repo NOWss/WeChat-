@@ -1,0 +1,26 @@
+<view class="container">
+  <van-empty description="暂无订单" wx:if="{{ orderList.length==0 }}" />
+  <view class="order-list" wx:else>
+    <view class="order-item" wx:for="{{orderList}}" wx:key="index" wx:for-item="item">
+      <view class="title">
+        <view class="store">取餐号：{{item.id}}</view>
+        <view class="state">已付款</view>
+      </view>
+      <view class="img-banner" >
+        <view class="img-box" wx:for="{{ item.order }}" wx:key="index" wx:for-item="v">
+          <image src="{{ v.img }}" mode="widthFix" class="auto-img" />
+        </view>
+      </view>
+      <view class="text-box">
+        <view class="time">
+          {{ item.times }}
+        </view>
+        <view class="count-price">
+          共 {{ item.count }} 件
+          <text>￥{{ item.price }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

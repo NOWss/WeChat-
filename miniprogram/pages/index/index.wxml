@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="bg"></view>
+  <view class="store">
+    <view class="img-box">
+      <image class="auto-img" src="{{store.logo}}" mode="widthFix" />
+    </view>
+    <view class="title">
+      {{store.name}}
+    </view>
+    <view class="location">
+      <view class="iconfont icon-dingwei">
+        <text> {{store.location}}</text>
+      </view>
+    </view>
+    <view class="feature">
+      <text class="price" space="nbsp">人均{{store.price}}</text>
+      <text space="nbsp">{{store.feature}}</text>
+    </view>
+    <view class="iconfont icon-huo">
+      <text space="nbsp"> 客流指数{{store.passenger}}</text>
+    </view>
+  </view>
+  <view class="recommend">
+    <view class="title">每周推荐</view>
+    <view class="recommend-list">
+      <view class="recommend-item" wx:for="{{label}}" wx:for-item="item" wx:key="index">
+        <view class="label">{{item.label}}</view>
+        <view class="img-box">
+          <image class="auto-img" src="{{item.img}}" mode="widthFix" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="menu">
+    <view class="title">人气榜单</view>
+    <view class="menu-list">
+      <view class="menu-item" wx:for="{{popularity}}" wx:for-item="item" wx:key="index">
+        <view class="img-box">
+          <image src="{{item.img}}" mode="widthFix" class="auto-img" />
+        </view>
+        <view class="text-box">
+          <view class="title">
+            <text>{{item.title}}</text>
+            <van-tag round type="danger">招牌</van-tag>
+          </view>
+          <view class="volume">
+            已售{{item.volume}}份
+          </view>
+        </view>
+        <view class="price">
+          ￥{{item.price}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

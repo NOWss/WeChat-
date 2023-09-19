@@ -1,0 +1,118 @@
+.container {
+  background-color: #ddd;
+  width: 100vw;
+  height: 100vh;
+
+  .top-nav {
+    margin-top: 30rpx;
+    width: 100vw;
+    background-color: #fff;
+  }
+
+  .commodity-box {
+    margin: 40rpx 0;
+    width: calc(100vw - 20rpx);
+    background-color: #fff;
+    padding: 10rpx;
+
+    >.title {
+      font-size: 36rpx;
+      padding: 20rpx 0;
+      border-bottom: 1px solid #999;
+      margin-bottom: 20rpx;
+    }
+
+    .commodity-list {
+      >view {
+        margin-bottom: 30rpx;
+      }
+
+      .commodity-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10rpx;
+
+        .img-box {
+          width: 150rpx;
+          height: 150rpx;
+          border-radius: 10rpx;
+          overflow: hidden;
+
+          .auto-img {
+            height: 100% !important;
+          }
+        }
+
+        .text-box {
+          flex: 1;
+          margin-left: 20rpx;
+          line-height: 75rpx;
+
+          .title {
+            font-weight: bold;
+            font-size: 32rpx;
+          }
+
+          .price {
+            color: #e4393c;
+            font-weight: bold;
+            font-size: 32rpx;
+
+            >text {
+              font-size: 28rpx;
+            }
+          }
+        }
+      }
+
+      .extra-charges {
+        padding: 0 10rpx;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .commodity-price {
+    width: calc(100vw - 30rpx);
+    background-color: #fff;
+    padding: 15rpx;
+    margin-bottom: 30rpx;
+
+    .tag-price {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 80rpx;
+
+      .price {
+        >text {
+          font-size: 26rpx;
+        }
+      }
+    }
+
+    .all-price {
+      text-align: right;
+
+      .price {
+        color: #e4393c;
+        font-size: 34rpx;
+        font-weight: bold;
+
+        .monetary {
+          font-size: 28rpx;
+        }
+      }
+    }
+
+  }
+  .remark{
+    width: 100vw;
+  }
+  .password-popup{
+    width: 80vw;
+    border: 1px solid #000;
+    margin: 60rpx auto;
+  }
+}

@@ -1,0 +1,71 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container .top-user {
+  background-color: #e4393c;
+  height: 200rpx;
+  display: flex;
+  padding: 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 60rpx);
+}
+
+.container .top-user .img-box {
+  width: 100rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.container .top-user .text-box {
+  flex: 1;
+  margin-left: 20rpx;
+  color: #fff;
+}
+
+.container .top-user .text-box .user {
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+.container .my-order {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 120rpx);
+  margin: 30rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.container .my-order .text-box .title {
+  font-size: 36rpx;
+}
+
+.container .my-order .text-box .text {
+  color: #777777;
+}
+
+.container .help {
+  width: 100%;
+}
+
+.container .banner {
+  width: calc(100% - 60rpx);
+  margin-bottom: 20rpx;
+}
+
+.container .banner .img-box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20rpx;
+}
+
+.container .backLogin {
+  margin: 30rpx 0;
+  width: calc(100vw - 60rpx);
+}
